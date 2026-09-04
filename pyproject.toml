@@ -1,0 +1,28 @@
+[project]
+name = "innotter-micro-service"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "boto3>=1.43.87",
+    "celery>=5.6.3",
+    "django>=6.1.1",
+    "djangorestframework>=3.18.0",
+    "mysqlclient>=2.2.8",
+    "pyjwt>=2.13.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.6",
+]
+
+[tool.ruff]
+# max length string
+line-length = 88
+
+[tool.ruff.lint]
+# check sintax (E, F) and sorting imports (I)
+select = ["E", "F", "I"]
